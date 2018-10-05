@@ -22,6 +22,22 @@
   color: #61dafb;
 }
 
+.App-content-bg {
+  background-color: #282c34;
+  padding-bottom: 10em;
+}
+
+.App-content {
+  margin: 0 auto;
+  width: 70%;
+}
+
+.App-content label {
+  color: #fff;
+  font-size: 1.5em;
+  text-align: start;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

@@ -1,0 +1,139 @@
+.select {
+    position: relative;
+
+    width: 100%;
+    /*padding: 10px 15px;*/
+    /*border-radius: 2em;*/
+    transition: none;
+
+    font-size: 16px;
+    color: #333;
+
+    cursor: pointer;
+}
+
+.select.opened {
+    /*border-radius: 1em 1em 0 0;*/
+}
+
+.select .options {
+    position: absolute;
+    width: 100%;
+    border: solid 1px #ddd;
+    overflow: hidden;
+    box-sizing: border-box;
+
+    background-color: #fff;
+
+    padding-bottom: 5px;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+    z-index: 3000;
+}
+
+.select .options > span {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 5px 15px;
+
+    font-size: inherit;
+    color: inherit;
+
+    background-color: #fff;
+
+    transition: all .2s;
+}
+
+.select .options > span.selected {
+    background-color: #7ab4dd;
+}
+
+.select .options > span:hover {
+    background-color: #ddd;
+}
+
+/* Displayer */
+
+.displayer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    width: 100%;
+    padding: 8px 15px;
+    box-sizing:border-box;
+    text-align: start;
+
+    border: solid 1px #ddd;
+    border-radius: .5em;
+
+    font-size: inherit;
+    color: inherit;
+
+    background-color: #fff;
+
+    cursor: inherit;
+    transition: none;
+}
+
+.select:focus .displayer,
+.displayer:focus {
+    background-color: #6099cc;
+    border-color: #5088bb;
+    color: #fff;
+    text-decoration: underline;
+}
+
+.select:focus .arrow-container svg,
+.displayer:focus .arrow-container svg {
+    fill: #fff;
+}
+
+.displayer.opened {
+    border-radius: .5em .5em 0 0;
+}
+
+.arrow-container {
+    padding: 0 5px;
+}
+
+.arrow-container svg {
+    fill: #777;
+    width: 10px;
+}
+
+.arrow-container.opened svg {
+    transform: rotate(180deg);
+}
+
+.arrow-container:hover svg {
+    width: 10px;
+    fill: #999;
+}
+
+
+/* Deprecated input */
+
+.select input{
+    display: none;
+
+    width: 100%;
+    padding: 10px 15px;
+    box-sizing:border-box;
+
+    border: solid 1px #ddd;
+    border-radius: 2em;
+
+    font-size: inherit;
+    color: inherit;
+
+    background-color: #fff;
+
+    cursor: inherit;
+    transition: none;
+}
+
+.select.opened input {
+    border-radius: 1em 1em 0 0;
+}
